@@ -138,3 +138,8 @@ form button:hover {
     background: #e1faec;
     border: 2px solid #34cd79;
 }
+
+.items-grid li image,
+.items-grid li span {
+    pointer-events: none;
+}

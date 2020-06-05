@@ -41,3 +41,14 @@ document
     .addEventListener("change", getCities)
 
 //itens coleta
+
+const itemsToCollect = document.querySelectorAll(".items-grid li")
+for (const item of itemsToCollect) {
+    item.addEventListener("click", handleSelectedItem)
+}
+
+function handleSelectedItem(event) {
+    const itemLi = event.target
+    itemLi.classList.toggle("selected")
+    const itemId = itemLi.dataset.id
+}
