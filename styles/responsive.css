@@ -1,0 +1,46 @@
+@media(max-width: 900px) {
+    #page-home {
+        background-position-x: 70vw;
+    }
+    #page-home .content {
+        align-items: center;
+        text-align: center;
+    }
+    #page-home header a {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #page-home main {
+        align-items: center;
+    }
+    #page-home main a strong {
+        /* alteração minha */
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1700px) {
+    #page-home {
+        background-position-x: 45vw;
+    }
+}
+
+@media (max-height: 760px) {
+    #page-home {
+        background-position-y: 200px;
+    }
+}
+
+
+/* alterações minhas */
+
+@media (max-width: 350px) {
+    #page-home .content main h1 {
+        font-size: 40px;
+    }
+    #page-home .content main p {
+        font-size: 20px;
+    }
+}
