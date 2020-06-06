@@ -73,3 +73,11 @@ function handleSelectedItem(event) {
     }
     collectItems.value = selectedItems
 }
+
+// teste
+const cadastro = document.querySelector("form button")
+const modal = document.querySelector("#modal")
+
+cadastro.addEventListener("click", () => {
+    modal.classList.remove("hidden")
+})
