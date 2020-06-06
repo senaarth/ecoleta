@@ -47,8 +47,28 @@ for (const item of itemsToCollect) {
     item.addEventListener("click", handleSelectedItem)
 }
 
+let selectedItems = []
+
 function handleSelectedItem(event) {
     const itemLi = event.target
     itemLi.classList.toggle("selected")
     const itemId = itemLi.dataset.id
+
+    // Verififying existence of selected items and selecting them
+    const alreadySelected = selectedItems.findIndex(item => {
+            const itemFound = item == itemId
+            return itemFound
+        })
+        // removing of the selection if it is already selected
+        // and adding if not
+    if (alreadySelected >= 0) {
+        const filteredItems = selectedItems.filter(item => {
+            const itemIsDifferent = item != itemId
+            return itemIsDifferent
+        })
+        selectedItems = filteredItems
+    } else {
+        selectedItems.push(itemId)
+    }
+    console.log(selectedItems)
 }
