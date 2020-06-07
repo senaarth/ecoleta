@@ -1,25 +1,18 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
+{% set bodyId = "page-create-point" %}
+
+{% block title %}
     <title>Cadastro Ponto de Coleta</title>
-    <link rel="icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="styles/main.css">
+{% endblock title %}
+
+{% block styles %}
     <link rel="stylesheet" href="styles/create-point.css">
     <link rel="stylesheet" href="styles/modal.css">
+{% endblock styles %}
 
-    <link rel="stylesheet" href="styles/responsive.css">
-</head>
-
-<body id="page-create-point">
-    <div>
-        <header>
-            <img src="/assets/logo.svg" alt="">
-            <a href="/"> <span></span>Voltar para Home</a>
-        </header>
-    </div>
-
+{% block content %}
+    {% include "partials/page-header.html" %}
     <div>
         <form action="">
             <h1>Cadastrar Ponto de Coleta</h1>
@@ -30,13 +23,13 @@
 
                 <div class="field">
                     <label for="name">Nome da Entidade</label>
-                    <input type="text" name="name" required>
+                    <input type="text" name="name" required="required">
                 </div>
 
                 <div class="field-group">
                     <div class="field">
                         <label for="address">Endereço</label>
-                        <input type="text" name="address" required>
+                        <input type="text" name="address" required="required">
                     </div>
                     <div class="field">
                         <label for="address2">Número/Complemento</label>
@@ -47,14 +40,14 @@
                 <div class="field-group">
                     <div class="field">
                         <label for="state">Estado</label>
-                        <select name="uf" required>
+                        <select name="uf" required="required">
                             <option value="">Selecione o Estado</option>
                         </select>
                         <input type="hidden" name="state">
                     </div>
                     <div class="field">
                         <label for="city">Cidade</label>
-                        <select name="city" disabled required>
+                        <select name="city" disabled="disabled" required="required">
                             <option value="">Selecione a Cidade</option>
                         </select>
                     </div>
@@ -99,17 +92,8 @@
             <button type="submit">Confirmar Cadastro</button>
         </form>
     </div>
-    <!--  -->
-    <div id="modal" class="hidden">
-        <div class="content">
-            <div class="header">
-                <h1>Cadastro Concluído</h1>
-                <img src="/assets/check.svg" alt="confirmation">
-            </div>
-        </div>
-    </div>
-    <!--  -->
-    <script src="/scripts/create-point.js"></script>
-</body>
+{% endblock content %}
 
-</html>
+{% block script %}
+    <script src="/scripts/create-point.js"></script>
+{% endblock script %}
