@@ -54,7 +54,7 @@ module.exports = db
 //     db.run(query, values, afterInsertData)
 
 // Delete some Data of the Table
-// db.run(`DELETE FROM places WHERE id = ?`, [2], function(err) {
+// db.run(`DELETE FROM places WHERE id = ?`, [4], function(err) {
 //     if (err) {
 //         return console.log(err)
 //     }
