@@ -4,6 +4,8 @@ const sqlite3 = require("sqlite3").verbose()
 // Creating Database Object
 const db = new sqlite3.Database("./src/database/database.db")
 
+module.exports = db
+
 // db.serialize(() => {
 //     // Creating a Table
 //     db.run(`
@@ -52,7 +54,7 @@ const db = new sqlite3.Database("./src/database/database.db")
 //     db.run(query, values, afterInsertData)
 
 // Delete some Data of the Table
-// db.run(`DELETE FROM places WHERE id = ?`, [1], function(err) {
+// db.run(`DELETE FROM places WHERE id = ?`, [2], function(err) {
 //     if (err) {
 //         return console.log(err)
 //     }

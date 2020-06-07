@@ -55,6 +55,8 @@ function handleSelectedItem(event) {
     itemLi.classList.toggle("selected")
     const itemId = itemLi.dataset.id
 
+    // console.log('ITEM ID: ', itemId)
+
     // Verififying existence of selected items and selecting them
     const alreadySelected = selectedItems.findIndex(item => {
             const itemFound = item == itemId
@@ -71,13 +73,16 @@ function handleSelectedItem(event) {
     } else {
         selectedItems.push(itemId)
     }
+
+    // console.log(`selectedItems: `, selectedItems)
+
     collectItems.value = selectedItems
 }
 
 // teste
-const cadastro = document.querySelector("form button")
-const modal = document.querySelector("#modal")
+// const cadastro = document.querySelector("form button")
+// const modal = document.querySelector("#modal")
 
-cadastro.addEventListener("click", () => {
-    modal.classList.remove("hidden")
-})
+// cadastro.addEventListener("click", () => {
+//     modal.classList.remove("hidden")
+// })
